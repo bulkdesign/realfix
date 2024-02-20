@@ -2,7 +2,7 @@
 /**
  * Setup suggested and required plugins for the theme.
  *
- * @package mm
+ * @package bulk
  */
 
 /**

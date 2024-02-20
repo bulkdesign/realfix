@@ -2,7 +2,7 @@
 /**
  * Declares theme's custom taxonomies
  *
- * @package mm
+ * @package bulk
  */
 
 /**

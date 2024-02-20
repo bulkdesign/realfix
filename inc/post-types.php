@@ -2,7 +2,7 @@
 /**
  * Declares theme's custom post types
  *
- * @package mm
+ * @package bulk
  */
 
 /**
