@@ -1,0 +1,8 @@
+.header-simple .logo :is(img, svg) {
+    max-width: 18rem;
+    max-height: 6rem;
+}
+
+.header-simple .logo :is(svg path) {
+    color: var(--color-black);
+}
