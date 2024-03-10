@@ -8,9 +8,6 @@
         --color-dark-red: #8F0E00;
         --color-black: #0A0A0A;
 
-        --link-color: var(--color-dark-grey);
-        --hover-link-color: var(--color-dark-red);
-
         /* BACKGROUND */
         --light-red-color: var(--color-light-red);
         --dark-red-color: var(--color-dark-red);
@@ -111,6 +108,14 @@
         /* MARGINS */
 
         /* MISCELANEOUS */
+        a {
+            color: var(--color-dark-grey);
+        }
+
+        a:is(:active, :hover, :focus) {
+            color: var(--color-dark-red);
+        }
+        
         --element-border-radius: 2rem;
 
 }
