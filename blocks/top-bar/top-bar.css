@@ -1,0 +1,7 @@
+.top-bar-inner {
+    grid-template-columns: 1fr;
+}
+
+.top-bar-content {
+    justify-content: center;
+}
