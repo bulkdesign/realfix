@@ -1,0 +1,7 @@
+.content-in-columns .content-in-columns-details-image img {
+    border-radius: var(--element-border-radius);
+}
+
+.content-in-columns .content-in-columns-buttons {
+    justify-content: center;
+}
