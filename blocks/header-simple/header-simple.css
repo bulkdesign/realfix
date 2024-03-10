@@ -7,6 +7,36 @@
     color: var(--color-black);
 }
 
-.header-simple a {
+.header-simple nav ul.menu li.menu-item a:not(:hover, :active, :focus) {
     color: var(--color-black);
+    text-underline-offset: 0.3rem;
+    text-decoration-color: transparent;
+    transition: 0.3s ease all;
+}
+
+.header-simple a:is(:hover, :active, :focus) {
+    text-decoration-color: var(--color-dark-red);
+}
+
+.header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a {
+    color: var(--color-white);
+    border-color: var(--color-red);
+    background-color: var(--color-red);
+    border-radius: 20rem;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+.header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a:is(:active, :hover, :focus) {
+    border-color: var(--color-dark-red);
+    background-color: var(--color-dark-red);
+}
+
+.header-simple :is(.header-simple-search-toggle, .header-simple-search-form-submit):is(:hover, :focus, :active) {
+    color: var(--color-dark-red);
+}
+
+.header-simple.search-open .header-simple-search-form {
+    outline: 0.1rem solid var(--color-black);
+    border-radius: var(--element-border-radius);
 }
