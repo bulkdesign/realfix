@@ -1,0 +1,78 @@
+.footer-two .footer-two-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.footer-two .footer-two-main-column h2 {
+    font: var(--font-headline-8);
+}
+
+.footer-two .footer-two-main-column ul li a {
+    color: var(--color-white);
+    text-decoration-color: transparent;
+    text-underline-offset: 0.3rem;
+    transition: 0.3s ease all;
+}
+
+.footer-two .footer-two-main-column ul li a:is(:hover, :active, :focus) {
+    color: var(--color-dark-grey);
+    text-decoration-color: var(--color-dark-grey);
+}
+
+.footer-two .footer-two-main-column:is(:nth-child(3)) a img {
+    width: 70%;
+    transition: 0.3s ease all;
+}
+
+.footer-two .footer-two-main-column:is(:nth-child(3)) a:is(:active, :hover, :focus) img {
+    opacity: 0.8;
+}
+
+.footer-two .footer-two-main-column ul.social-media {
+    display: flex;
+}
+
+.footer-two .footer-two-main-column ul.social-media svg path {
+    fill: var(--color-white);
+    transition: 0.3s ease all;
+}
+
+.footer-two-main-column[data-column-type="contact"] ul.social-media li a :is(svg, img) {
+    width: 3.4rem;
+    height: 3.4rem;
+}
+
+.footer-two-main-column[data-column-type="contact"] ul.social-media li a:is(:active, :hover, :focus) :is(svg path) {
+    fill: var(--color-dark-grey);
+}
+
+.footer-two-main-column[data-column-type="contact"] ul.social-media li:is(:last-child) a :is(svg, img) {
+    margin-right: 0;
+}
+
+.footer-two .footer-two-copyright a {
+    color: var(--color-white);
+    text-decoration-color: transparent;
+    text-underline-offset: 0.3rem;
+    transition: 0.3s ease all;
+}
+
+.footer-two .footer-two-copyright a:is(:active, :hover, :focus) {
+    color: var(--color-dark-grey);
+    text-decoration-color: var(--color-dark-grey);
+}
+
+@media (min-width: 768px) {
+    .footer-two .footer-two-main {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .footer-two .footer-two-main-column:is(:nth-child(3)) {
+        text-align: center;
+    }
+
+    .footer-two .footer-two-main-column:is(:last-child) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
