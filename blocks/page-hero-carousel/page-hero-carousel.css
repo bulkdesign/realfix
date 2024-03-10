@@ -1,0 +1,8 @@
+.page-hero-carousel h1.page-hero-carousel-title {
+    font: var(--font-headline-2);
+    line-height: normal;
+}
+
+.page-hero-carousel h1.page-hero-carousel-title span {
+    color: var(--color-red);
+}
