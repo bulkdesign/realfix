@@ -35,12 +35,12 @@ add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_scripts', 30 );
  */
 function child_theme_allowed_blocks() {
 	return array(
+        'advanced-call-to-action',
         'columns-with-content',
         'content-in-columns',
         'content-with-media',
         'cookies-disclaimer',
         'faq-accordion',
-        'footer-one',
         'footer-two',
         'header-simple',
         'latest-news',
@@ -50,14 +50,13 @@ function child_theme_allowed_blocks() {
         'page-hero-carousel',
         'posts-archive-with-filter',
         'section-background',
-        'services',
         'single-post-content',
         'template-content',
         'testimonials',
         'title-and-content',
         'photos-carousel',
         'top-bar',
-        'search'
+        'quick-links',
     );
 }
 add_filter( 'theme_allowed_blocks', 'child_theme_allowed_blocks', 10, 0);
