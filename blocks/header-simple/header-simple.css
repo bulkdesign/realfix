@@ -6,3 +6,7 @@
 .header-simple .logo :is(svg path) {
     color: var(--color-black);
 }
+
+.header-simple a {
+    color: var(--color-black);
+}
