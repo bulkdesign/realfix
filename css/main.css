@@ -21,6 +21,9 @@
             --background-color: var(--dark-red-color);
         }
 
+        /* BORDER RADIUS */
+        --element-border-radius: 2rem;
+
         /* TEXT */
             /* PRIMARY FONT */
 
@@ -74,33 +77,6 @@
                 border-color: transparent;
             }
 
-        /* SECONDARY BUTTON */
-            /* STYLE */
-
-            /* LIGHT BACKGROUND COLORS */
-            :is([data-color-scheme="red"]) :is(.secondary-button, .wp-block-button:is(.is-style-outline) > .wp-element-button) {
-                color: var(--color-red);
-                border-color: var(--color-red);
-            }
-
-            :is([data-color-scheme="red"]) :is(.secondary-button, .wp-block-button:is(.is-style-outline) > .wp-element-button):is(:active, :hover, :focus) {
-                background-color: var(--dark-red-color);
-                color: var(--color-white);
-                border-color: var(--color-dark-red);
-            }
-
-            /* DARK */
-            :is([data-color-scheme="dark-red"]) :is(.secondary-button, .wp-block-button:is(.is-style-outline) > .wp-element-button) {
-                color: var(--color-white);
-                border-color: var(--color-white);
-            }
-
-            :is([data-color-scheme="dark-red"]) :is(.secondary-button, .wp-block-button:is(.is-style-outline) > .wp-element-button):is(:active, :hover, :focus) {
-                background-color: var(--dark-red-color);
-                color: var(--color-white);
-                border-color: var(--color-white);
-            }
-
         /* FORMS */
 
         /* EYEBROW */
@@ -108,6 +84,9 @@
         /* MARGINS */
 
         /* MISCELANEOUS */
+        --link-color: var(--color-black);
+        --hover-link: var(--color-dark-grey);
+
         a {
             color: var(--color-dark-grey);
         }
@@ -115,8 +94,6 @@
         a:is(:active, :hover, :focus) {
             color: var(--color-dark-red);
         }
-        
-        --element-border-radius: 2rem;
 
 }
 
