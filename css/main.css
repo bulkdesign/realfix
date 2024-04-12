@@ -4,7 +4,7 @@
         --color-white: #FFFFFF;
         --color-light-grey: #F2F2F2;
         --color-dark-grey: #8F8F8F;
-        --color-red: #ff2e17;
+        --color-red: #EC1C24;
         --color-dark-red: #8F0E00;
         --color-black: #0A0A0A;
 
@@ -28,6 +28,10 @@
             /* PRIMARY FONT */
 
             /* SECONDARY FONT */
+            h2, .h2 {
+                line-height: normal;
+                font: var(--font-headline-3);
+            }
 
             /* FONT SIZES */
 
