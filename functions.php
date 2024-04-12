@@ -40,6 +40,7 @@ function child_theme_allowed_blocks() {
         'content-in-columns',
         'content-with-media',
         'cookies-disclaimer',
+        'contact-with-map',
         'faq-accordion',
         'footer-two',
         'header-simple',
