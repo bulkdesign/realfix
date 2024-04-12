@@ -1,0 +1,15 @@
+.contact-with-map :is(.contact-with-map-contact-info, .contact-with-map-iframe iframe) {
+    border-radius: var(--element-border-radius);
+}
+
+@media (min-width: 992px) {
+    .contact-with-map:is([data-map-position="left"]) .contact-with-map-contact-info,
+    .contact-with-map:is([data-map-position="right"]) .contact-with-map-iframe iframe {
+        border-radius: 0 var(--element-border-radius) var(--element-border-radius) 0;
+    }
+
+    .contact-with-map:is([data-map-position="right"]) .contact-with-map-contact-info,
+    .contact-with-map:is([data-map-position="left"]) .contact-with-map-iframe iframe {
+        border-radius: var(--element-border-radius) 0 0 var(--element-border-radius);
+    }
+}
