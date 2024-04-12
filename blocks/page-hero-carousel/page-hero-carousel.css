@@ -6,3 +6,11 @@
 .page-hero-carousel:is([data-content-width="centered-half"], [data-content-width="half"]) .page-hero-carousel-inner {
     width: 80%;
 }
+
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next) svg * {
+    stroke: var(--color-white);
+}
+
+:is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next):is(:hover, :active, :focus) svg * {
+    stroke: var(--color-red);
+}
