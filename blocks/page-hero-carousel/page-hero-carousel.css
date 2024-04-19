@@ -1,3 +1,12 @@
+.page-hero-carousel,
+.page-hero-carousel-slide {
+    min-height: 30rem;
+}
+
+.page-hero-carousel-image :is(img) {
+    object-position: right;
+}
+
 .page-hero-carousel h1.page-hero-carousel-title {
     font: var(--font-headline-2);
     line-height: normal;
@@ -13,4 +22,39 @@
 
 :is(.page-hero-carousel-navigation-prev, .page-hero-carousel-navigation-next):is(:hover, :active, :focus) svg * {
     stroke: var(--color-red);
+}
+
+@media (min-width: 768px) {
+
+    .page-hero-carousel,
+    .page-hero-carousel-slide {
+        min-height: 40rem;
+    }
+
+    .page-hero-carousel-image :is(img) {
+        object-position: right;
+    }
+}
+
+@media (min-width: 992px) {
+    .page-hero-carousel,
+    .page-hero-carousel-slide {
+        min-height: 50rem;
+    }
+
+    .page-hero-carousel-image :is(img) {
+        object-position: right;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .page-hero-carousel,
+    .page-hero-carousel-slide {
+        min-height: 60rem;
+    }
+
+    .page-hero-carousel-image :is(img) {
+        object-position: center;
+    }
 }
