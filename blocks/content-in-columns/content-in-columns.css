@@ -13,3 +13,15 @@
 .content-in-columns .content-in-columns-details-image img {
     aspect-ratio: 1/1;
 }
+
+.content-in-columns:is([data-color-scheme="dark"]) .content-in-columns-media .content-in-columns-image :is(img) {
+    opacity: 0.2;
+}
+
+.content-in-columns .content-in-columns-details .content-in-columns-details-item {
+    text-align: center;
+}
+
+.content-in-columns .content-in-columns-details .content-in-columns-details-item .content-in-columns-details-icon {
+    margin: 0 auto;
+}
