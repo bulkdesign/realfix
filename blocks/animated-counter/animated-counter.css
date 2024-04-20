@@ -1,0 +1,3 @@
+.animated-counter:is([data-color-scheme="dark"]) .animated-counter-media .animated-counter-image :is(img) {
+    opacity: 0.2;
+}

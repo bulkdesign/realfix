@@ -1,0 +1,3 @@
+.advanced-call-to-action:is([data-media-position="under"], [data-color-scheme|="dark"]) .advanced-call-to-action-media .advanced-call-to-action-image :is(img) {
+    opacity: 0.2;
+}
