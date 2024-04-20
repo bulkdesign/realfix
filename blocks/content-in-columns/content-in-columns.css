@@ -8,6 +8,7 @@
 
 .content-in-columns .content-in-columns-details {
     margin: calc(var(--block-margin) / 2) 0 0;
+    row-gap: 0;
 }
 
 .content-in-columns .content-in-columns-details-image img {
@@ -24,4 +25,18 @@
 
 .content-in-columns .content-in-columns-details .content-in-columns-details-item .content-in-columns-details-icon {
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+
+    .content-in-columns .content-in-columns-details:is([data-columns="3"]) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content-in-columns .content-in-columns-details:is([data-columns="3"]) .content-in-columns-details-item {
+        flex: 25%;
+    }
+
 }
