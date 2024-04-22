@@ -1,3 +1,11 @@
 .advanced-call-to-action:is([data-media-position="under"], [data-color-scheme|="dark"]) .advanced-call-to-action-media .advanced-call-to-action-image :is(img) {
     opacity: 0.2;
 }
+
+.advanced-call-to-action:is(.light-font) h2 {
+    font-weight: 400;
+}
+
+.advanced-call-to-action:is(.light-font) p {
+    font-weight: 300;
+}
