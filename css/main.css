@@ -110,3 +110,20 @@
     max-width: 100%;
     -webkit-transform: translate3d(0,0,0);
 }
+
+/* Temporary styles for lists */
+ul:is(.collapsible) {
+    list-style: none;
+    padding: 0;
+}
+
+ul:is(.collapsible) li {
+    margin: 3rem 0;
+    padding-top: 2rem;
+    border-top: 0.1rem solid;
+}
+
+ul:is(.collapsible) li :is(.collapsible-header) {
+    font: var(--font-headline-6);
+    color: var(--color-red);
+}
