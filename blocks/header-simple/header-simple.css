@@ -40,3 +40,9 @@
     outline: 0.1rem solid var(--color-black);
     border-radius: var(--element-border-radius);
 }
+
+@media (min-width: 992px) {
+    .header-simple nav ul.menu li:is(.menu-item-has-children) ul.sub-menu {
+        background-color: var(--color-light-grey);
+    }
+}
