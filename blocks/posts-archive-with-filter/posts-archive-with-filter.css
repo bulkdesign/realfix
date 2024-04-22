@@ -1,0 +1,3 @@
+:is(.search-results) .page-wrapper main .posts-archive-with-filter {
+    margin-top: calc( var(--block-margin) / 2 );
+}
