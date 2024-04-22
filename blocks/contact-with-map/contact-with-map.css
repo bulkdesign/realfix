@@ -1,3 +1,7 @@
+:is(.page-template-template-empty) .page-wrapper main .blocks-container .contact-with-map {
+    margin-top: calc( var(--block-margin) / 2 );
+}
+
 .contact-with-map :is(.contact-with-map-contact-info, .contact-with-map-iframe iframe) {
     border-radius: var(--element-border-radius);
 }
