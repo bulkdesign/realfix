@@ -39,4 +39,8 @@
         flex: 25%;
     }
 
+    .content-in-columns .content-in-columns-details:is([data-columns="4"]) {
+        row-gap: var(--row-gap);
+    }
+
 }
