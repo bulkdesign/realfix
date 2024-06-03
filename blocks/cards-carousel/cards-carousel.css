@@ -1,0 +1,179 @@
+.cards-carousel{
+    width: 100%;
+    margin: var(--block-margin) auto calc(var(--block-margin) + var(--item-row-gap));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: var(--column-gap);
+    align-items: start;
+}
+
+.cards-carousel-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--item-column-gap);
+    row-gap: var(--item-row-gap);
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.cards-carousel-list-wrapper{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: var(--column-gap);
+    row-gap: var(--row-gap);
+}
+
+.cards-carousel-list{
+    width: 100%;
+}
+
+.cards-carousel-list .swiper-wrapper{
+    align-items: center;
+    height: auto;
+}
+
+.cards-carousel-list .swiper-slide{
+    width: min(50%, 30rem);
+}
+
+.cards-carousel-list-item{
+    text-align: center;
+}
+
+.cards-carousel-list-item :is(svg, img){
+    display: block;
+    margin: auto;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.cards-carousel .cards-carousel-list .swiper-slide {
+    display: flex;
+    column-gap: var(--column-gap);
+}
+
+.cards-carousel-list .swiper-slide {
+    width: 100%;
+}
+
+.cards-carousel-list-item :is(svg, img) {
+    height: 50rem;
+}
+
+.cards-carousel .cards-carousel-list-item {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: var(--column-gap);
+}
+
+.cards-carousel .cards-carousel-item-image :is(img) {
+    border-radius: var(--element-border-radius);
+}
+
+.cards-carousel .cards-carousel-item-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: var(--row-gap);
+}
+
+.cards-carousel .cards-carousel-item-info h3 {
+    font: var(--font-headline-7);
+    font-weight: 300;
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+.cards-carousel .cards-carousel-item-info h3 :is(.second-line) {
+    font: var(--font-headline-4);
+    text-decoration: underline;
+    text-decoration-thickness: 0.7rem;
+    text-decoration-color: var(--color-red);
+    text-underline-offset: 0.1rem;
+}
+
+.cards-carousel .cards-carousel-item-info h3:has(.second-line) {
+    margin-top: -1rem;
+}
+
+.cards-carousel .cards-carousel-item-image :is(img) {
+    border-radius: var(--element-border-radius);
+}
+
+.cards-carousel .cards-carousel-item-description {
+    margin-top: calc(var(--row-gap) / 2);
+}
+
+.cards-carousel .cards-carousel-item-info .primary-button {
+    margin-top: var(--item-row-gap);
+    display: flex;
+    column-gap: 1rem;
+    font: var(--font-body-small);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+}
+
+.cards-carousel .cards-carousel-item-info .primary-button::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../../img/whatsapp.png);
+    background-size: cover;
+}
+
+.cards-carousel-pagination,
+.cards-carousel-navigation{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--item-column-gap);
+    max-width: var(--wide-width);
+}
+
+.cards-carousel-pagination .swiper-pagination-bullet{
+    opacity: 1;
+    background-color: var(--link-color);
+}
+
+.cards-carousel-pagination .swiper-pagination-bullet-active{
+    opacity: 1;
+    background-color: var(--accent-color);
+}
+
+:is(.cards-carousel-navigation-prev, .cards-carousel-navigation-next) svg{
+    width: 4.8rem;
+    height: auto;
+}
+
+:is(.cards-carousel-navigation-prev, .cards-carousel-navigation-next) svg *{
+    transition: all 0.3s ease;
+    stroke: var(--link-color);
+}
+
+:is(.cards-carousel-navigation-prev, .cards-carousel-navigation-next):is(:hover, :focus, :active) svg *{
+    transition: all 0.3s ease;
+    stroke: var(--hover-link-color);
+}
+
+@media (min-width: 992px) {
+    .cards-carousel {
+        max-width: 100%;
+        row-gap: 0;
+        margin: var(--block-margin) auto calc( var(--block-margin) + var(--item-row-gap) );
+    }
+
+    .cards-carousel-list-wrapper {
+        max-width: var(--wide-width);
+        margin: 0 auto;
+    }
+
+    .cards-carousel .cards-carousel-list-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
