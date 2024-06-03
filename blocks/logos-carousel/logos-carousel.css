@@ -1,3 +1,23 @@
+.logos-carousel {
+    row-gap: 0;
+    margin: var(--column-gap) auto;
+}
+
+.logos-carousel .logos-carousel-list-wrapper {
+    max-width: 100%;
+}
+
 .logos-carousel .swiper-wrapper {
     transition-timing-function: linear;
+}
+
+.logos-carousel .logos-carousel-header h2 {
+    font: var(--font-headline-4);
+    font-weight: 300;
+    color: var(--color-grey);
+}
+
+.logos-carousel-list .swiper-slide {
+    width: min(50%, 25rem);
+    padding: var(--column-gap);
 }
