@@ -2,10 +2,54 @@
     opacity: 0.2;
 }
 
+.advanced-call-to-action .advanced-call-to-action-content {
+    padding: 0 var(--page-padding);
+}
+
+.advanced-call-to-action .advanced-call-to-action-content h2 {
+    font: var(--font-headline-4);
+    text-decoration: underline;
+    text-decoration-thickness: 0.7rem;
+    text-decoration-color: var(--color-red);
+    text-underline-offset: 0.1rem;
+}
+
 .advanced-call-to-action:is(.light-font) h2 {
     font-weight: 400;
 }
 
+.advanced-call-to-action .advanced-call-to-action-subtitle {
+    max-width: 45rem;
+    margin: 0 auto;
+    font: var(--font-body);
+}
+
 .advanced-call-to-action:is(.light-font) p {
     font-weight: 300;
+}
+
+.advanced-call-to-action .advanced-call-to-action-content[data-layout="1"] {
+    width: 100%;
+}
+
+.advanced-call-to-action-content-body {
+    margin-top: var(--column-gap);
+}
+
+.advanced-call-to-action .advanced-call-to-action-content .advanced-call-to-action-buttons a {
+    display: flex;
+    column-gap: 1rem;
+    font: var(--font-body-small);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+}
+
+.advanced-call-to-action .advanced-call-to-action-content .advanced-call-to-action-buttons a::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../../img/whatsapp.png);
+    background-size: cover;
 }
