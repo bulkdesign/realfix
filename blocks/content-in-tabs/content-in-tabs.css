@@ -1,0 +1,45 @@
+.content-in-tabs-list-wrapper {
+    width: 100%;
+}
+
+.content-in-tabs .content-in-tabs-list-item {
+    align-items: center;
+}
+
+.content-in-tabs .content-in-tabs-item-image {
+    background: var(--color-black);
+}
+
+.content-in-tabs .content-in-tabs-item-image :is(img) {
+    width: 100%;
+    border-radius: 0;
+}
+
+.content-in-tabs .content-in-tabs-tabs button:is(.primary-button) {
+    background-color: var(--color-black) !important;
+    border-color: var(--color-black) !important;
+    font: var(--font-body-xsmall);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.content-in-tabs .content-in-tabs-tabs button.primary-button:first-child {
+    border-radius: 1rem 0rem 0rem 1rem !important;
+}
+
+.content-in-tabs .content-in-tabs-tabs button.primary-button:last-child {
+    border-radius: 0rem 1rem 1rem 0rem !important;
+}
+
+.content-in-tabs .content-in-tabs-tabs button:is(.tablink[aria-selected="true"]) {
+    background: var(--primary-button-hover-background-color) !important;
+    border-color: var(--primary-button-hover-background-color) !important;
+    transition: 0.3s ease all;
+}
+
+.content-in-tabs .content-in-tabs-item-info a.primary-button {
+    font: var(--font-body-small);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+}
