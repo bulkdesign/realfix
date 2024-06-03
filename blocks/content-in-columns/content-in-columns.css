@@ -6,9 +6,22 @@
     justify-content: center;
 }
 
+.content-in-columns-eyebrow {
+    font: var(--font-headline-6);
+    font-weight: 300;
+    line-height: 100%;
+    margin-bottom: 0;
+    text-transform: none;
+    text-decoration: underline;
+    text-decoration-thickness: 0.6rem;
+    text-decoration-color: var(--color-red);
+    text-underline-offset: 0.6rem;
+}
+
 .content-in-columns .content-in-columns-details {
     margin: calc(var(--block-margin) / 2) 0 0;
-    row-gap: 0;
+    row-gap: var(--row-gap);
+    padding: 0 var(--page-padding);
 }
 
 .content-in-columns .content-in-columns-details-image img {
@@ -21,6 +34,21 @@
 
 .content-in-columns .content-in-columns-details .content-in-columns-details-item {
     text-align: center;
+    font: var(--font-body-small);
+    background: var(--color-light-grey);
+    display: flex;
+    justify-content: center;
+    padding: var(--item-column-gap);
+    border-radius: var(--element-border-radius);
+}
+
+.content-in-columns .content-in-columns-details .content-in-columns-details-item h3 {
+    font: var(--font-body);
+    font-weight: 700;
+}
+
+.content-in-columns .content-in-columns-details .content-in-columns-details-item p {
+    margin-bottom: 0;
 }
 
 .content-in-columns .content-in-columns-details .content-in-columns-details-item .content-in-columns-details-icon {
@@ -29,18 +57,24 @@
 
 @media (min-width: 768px) {
 
-    .content-in-columns .content-in-columns-details:is([data-columns="3"]) {
-        display: flex;
-        flex-wrap: wrap;
+    .content-in-columns .content-in-columns-details:is([data-columns="5"]) {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         justify-content: center;
+        column-gap: var(--item-column-gap);
     }
 
-    .content-in-columns .content-in-columns-details:is([data-columns="3"]) .content-in-columns-details-item {
-        flex: 25%;
+}
+
+@media (min-width: 992px) {
+
+    .content-in-columns .content-in-columns-details {
+        row-gap: 0;
+        padding: 0;
     }
 
-    .content-in-columns .content-in-columns-details:is([data-columns="4"]) {
-        row-gap: var(--row-gap);
+    .content-in-columns .content-in-columns-details .content-in-columns-details-item {
+        height: 30rem;
     }
 
 }
