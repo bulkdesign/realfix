@@ -4,7 +4,7 @@
 }
 
 .page-hero-carousel-image :is(img) {
-    object-position: right;
+    object-position: 65%;
 }
 
 .page-hero-carousel h1.page-hero-carousel-title {
