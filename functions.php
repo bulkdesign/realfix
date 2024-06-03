@@ -15,7 +15,7 @@ require_once get_stylesheet_directory() . '/inc/taxonomies.php';
  * Enqueue all the stylesheets necessary for the child theme.
  */
 function child_theme_enqueue_styles() {
-    //wp_enqueue_style( 'font-montserrat', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap' );
+    wp_enqueue_style( 'font-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' );
     wp_enqueue_style( 'child-main-css', get_stylesheet_directory_uri() . '/css/main.css', array('main-css'), theme_get_app_css_version() );
 }
 add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_styles' );
@@ -35,17 +35,19 @@ add_action( 'wp_enqueue_scripts', 'child_theme_enqueue_scripts', 30 );
  */
 function child_theme_allowed_blocks() {
 	return array(
-        'animated-counter',
+        'animated-counter-realfix',
         'advanced-call-to-action',
+        'cards-carousel',
         'columns-with-content',
         'content-in-columns',
         'content-with-media',
         'cookies-disclaimer',
         'contact-with-map',
+        'content-in-tabs',
         'faq-accordion',
         'footer-two',
         'header-simple',
-        'latest-news',
+        'latest-news-realfix',
         'logos-carousel',
         'logos-grid',
         'page-hero',
