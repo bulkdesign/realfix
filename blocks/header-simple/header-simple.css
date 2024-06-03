@@ -1,3 +1,7 @@
+.header-simple {
+    padding: var(--page-padding);
+}
+
 .header-simple .logo :is(img, svg) {
     max-width: 18rem;
     max-height: 6rem;
@@ -14,22 +18,42 @@
     transition: 0.3s ease all;
 }
 
+.header-simple a {
+    text-transform: uppercase;
+    font: var(--font-body-small);
+    font-weight: 600;
+}
+
 .header-simple a:is(:hover, :active, :focus) {
     text-decoration-color: var(--color-dark-red);
 }
 
 .header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a {
     color: var(--color-white);
-    border-color: var(--color-red);
-    background-color: var(--color-red);
-    border-radius: 20rem;
-    text-decoration: none;
-    transition: 0.3s ease all;
+    display: flex;
+    column-gap: 1rem;
+    border-radius: var(--element-border-radius);
+    font: var(--font-body-small);
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    background-color: rgb(5, 107, 56);
+    border-color: rgb(5, 107, 56);
+}
+
+.header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../../img/whatsapp.png);
+    background-size: cover;
 }
 
 .header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a:is(:active, :hover, :focus) {
-    border-color: var(--color-dark-red);
-    background-color: var(--color-dark-red);
+    background-color: rgb(3, 67, 35);
+    border-color: rgb(3, 67, 35);
+    text-decoration: none;
 }
 
 .header-simple :is(.header-simple-search-toggle, .header-simple-search-form-submit):is(:hover, :focus, :active) {
