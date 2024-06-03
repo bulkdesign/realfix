@@ -3,7 +3,9 @@
         /* COLORS */
         --color-white: #FFFFFF;
         --color-light-grey: #F2F2F2;
-        --color-dark-grey: #8F8F8F;
+        --color-grey: #B7B7B7;
+        --color-dark-grey: #3D3D3D;
+        --color-darkest-grey: #313131;
         --color-red: #EC1C24;
         --color-dark-red: #8F0E00;
         --color-black: #0A0A0A;
@@ -86,6 +88,7 @@
         /* EYEBROW */
 
         /* MARGINS */
+        --wide-width: calc( var(--container-width) + 13rem );
 
         /* MISCELANEOUS */
         --link-color: var(--color-black);
@@ -99,6 +102,14 @@
             color: var(--color-dark-red);
         }
 
+}
+
+:is(.h0, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .h7, .h8) {
+    letter-spacing: -0.1rem !important;
+}
+
+.page-wrapper :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, span, .eyebrow, .content-in-columns h3) {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .blocks-container {
