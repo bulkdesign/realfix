@@ -7,10 +7,6 @@
     width: 100%;
 }
 
-.footer-two .footer-two-main {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .footer-two .footer-two-main-column h2 {
     font: var(--font-headline-8);
 }
