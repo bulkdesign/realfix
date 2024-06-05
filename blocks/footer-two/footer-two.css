@@ -19,8 +19,8 @@
 }
 
 .footer-two .footer-two-main-column ul li a:is(:hover, :active, :focus) {
-    color: var(--color-dark-grey);
-    text-decoration-color: var(--color-dark-grey);
+    color: var(--color-light-grey);
+    text-decoration-color: var(--color-light-grey);
 }
 
 .footer-two .footer-two-main-column:is(:nth-child(3)) a img {
