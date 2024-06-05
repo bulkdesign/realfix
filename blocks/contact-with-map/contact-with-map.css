@@ -31,6 +31,6 @@
     }
 
     .contact-with-map-columns {
-        padding: 0;
+        padding: 0 var(--page-padding);
     }
 }
