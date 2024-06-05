@@ -18,6 +18,10 @@
     transition: 0.3s ease all;
 }
 
+.header-simple .header-simple-inner nav ul.menu li.current-menu-item a {
+    color: var(--color-red);
+}
+
 .header-simple a {
     text-transform: uppercase;
     font: var(--font-body-small);
@@ -37,8 +41,8 @@
     text-transform: uppercase;
     padding: 0.5rem 2rem;
     font-weight: 600;
-    background-color: rgb(5, 107, 56);
-    border-color: rgb(5, 107, 56);
+    background-color: rgb(8, 142, 62);
+    border-color: rgb(8, 142, 62);
 }
 
 .header-simple nav .menu-destaque-container ul.menu:is(.featured-menu) li a::before {
