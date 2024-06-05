@@ -7,7 +7,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<div class="blocks-container">
-			<div class="row pb50 pb40m">
+			<div class="alignwide">
 				<div class="col s12 m10 push-m1 pt50">
 					<h3 class="center cinza-bon-text f35 f23m mg80"><?php the_title(); ?></h3>
 					<ul class="collapsible mg50">
@@ -17,15 +17,15 @@ get_header(); ?>
 						if ( $padroes->have_posts() ) {
 							while ( $padroes->have_posts() ) : $padroes->the_post(); ?>
 
-								<li>
-									<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-									<div class="collapsible-body">
-										<span>
-											<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-											<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-										</span>
+								<details>
+									<summary>
+										<?php the_title(); ?>
+									</summary>
+									<div>
+										<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+										<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 									</div>
-								</li>
+								</details>
 
 							<?php endwhile; }
 							else {

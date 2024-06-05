@@ -12,7 +12,7 @@ get_header(); ?>
 						while ( $tintasmadeira->have_posts() ) : $tintasmadeira->the_post(); ?>
 
 							<div class="blocks-container">
-								<div class="row">
+								<div class="alignwide">
 									<div class="col s12 center pt50 pt30m">
 										<h3 class="vermelho-bon-text f30"><?php the_title(); ?></h3>
 									</div>
@@ -32,14 +32,16 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<div class="blocks-container">
-			<div class="row pb50 pb40m">
+			<div class="alignwide">
 
 				<!-- Acabamentos -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Acabamentos</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Acabamentos
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -54,15 +56,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -72,16 +74,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Fillers -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Fillers</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Fillers
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -96,15 +100,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -114,16 +118,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Impermeabilizantes -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Impermeabilizantes</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Impermeabilizantes
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -138,15 +144,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -156,16 +162,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Massas -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Massas</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Massas
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -180,15 +188,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -198,16 +206,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Primers -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Primers</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Primers
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -222,15 +232,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -240,16 +250,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Seladores -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Seladores</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Seladores
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -264,15 +276,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -282,16 +294,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Tingidores -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Tingidores</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Tingidores
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -306,15 +320,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -324,16 +338,18 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 
 				<!-- Vernizes -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Vernizes</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Vernizes
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $madeira = array('post_type' => 'tintas_madeira',
@@ -348,15 +364,15 @@ get_header(); ?>
 									if ( $madeira->have_posts() ) {
 										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -366,11 +382,10 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				
-
 			</div>
 		</div>
 	</div>

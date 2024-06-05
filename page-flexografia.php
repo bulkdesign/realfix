@@ -12,7 +12,7 @@ get_header(); ?>
 						while ( $tintasindustriais->have_posts() ) : $tintasindustriais->the_post(); ?>
 
 							<div class="blocks-container">
-								<div class="row">
+								<div class="alignwide">
 									<div class="col s12 center pt50 pt30m">
 										<h3 class="vermelho-bon-text f30"><?php the_title(); ?></h3>
 									</div>
@@ -32,7 +32,7 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<div class="blocks-container">
-			<div class="row pb50 pb40m">
+			<div class="alignwide">
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
 
@@ -41,16 +41,16 @@ get_header(); ?>
 						if ( $flexografia->have_posts() ) {
 							while ( $flexografia->have_posts() ) : $flexografia->the_post(); ?>
 
-								<li>
-									<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-									<div class="collapsible-body">
-										<span>
-											<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-											<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-										</span>
+								<details>
+									<summary>
+										<?php the_title(); ?>
+									</summary>
+									<div>
+										<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+										<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 									</div>
-								</li>
-
+								</details>
+								
 							<?php endwhile; }
 							else {
 								echo "Não há conteúdos.";

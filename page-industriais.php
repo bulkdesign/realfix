@@ -11,7 +11,7 @@ get_header(); ?>
 						while ( $tintasindustriais->have_posts() ) : $tintasindustriais->the_post(); ?>
 
 							<div class="blocks-container">
-								<div class="row">
+								<div class="alignwide">
 									<div class="col s12 center pt50 pt30m">
 										<h3 class="vermelho-bon-text f30"><?php the_title(); ?></h3>
 									</div>
@@ -31,14 +31,16 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<div class="blocks-container">
-			<div class="row pb50 pb40m">
+			<div class="alignwide">
 
 				<!-- Especialidades -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Especificações de Pintura</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Especificações de Pintura
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -53,15 +55,15 @@ get_header(); ?>
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -71,15 +73,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Acabamentos -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Acabamentos</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Acabamentos
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -89,20 +93,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'acabamentos-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -112,15 +116,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Alta temperatura -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Alta Temperatura</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Alta Temperatura
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -130,20 +136,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'alta-temperatura-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -153,15 +159,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Intermediário/Holding Primer -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Intermediário/Holding Primer</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Intermediário/Holding Primer
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -171,20 +179,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'holding-primer-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -194,15 +202,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Normas Petrobrás -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Normas Petrobrás</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Normas Petrobrás
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -212,20 +222,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'normas-petrobras',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -235,15 +245,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Primers -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Primers</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Primers
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -253,20 +265,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'primers-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -276,15 +288,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Primer/Acabamento -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Primer/Acabamento</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Primer/Acabamento
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -294,20 +308,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'primer-acabamento-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -317,15 +331,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Promotor de aderência -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Promotor de Aderência</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Promotor de Aderência
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -335,20 +351,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'aderencia-tintas-industriais',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -358,15 +374,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Primer Rico em Zinco -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Primer Rico em Zinco</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Primer Rico em Zinco
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -376,20 +394,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'primer-rico-zinco',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -399,15 +417,17 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
 				<!-- Shop Primer -->
 				<div class="col s12 m10 push-m1">	
 					<ul class="collapsible mg0">
-						<li>
-							<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i>Shop Primer</div>
-							<div class="collapsible-body">
+						<details>
+							<summary>
+								Shop Primer
+							</summary>
+							<div>
 								<ul class="collapsible">
 									<!-- Loop categorias -->
 									<?php $industriais = array('post_type' => 'tintas_industriais',
@@ -417,20 +437,20 @@ get_header(); ?>
 												'field'    => 'slug',
 												'terms'    => 'shop-primer',
 											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
+										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc', 'orderby' => 'name');
 									$industriais = new WP_Query( $industriais );
 									if ( $industriais->have_posts() ) {
 										while ( $industriais->have_posts() ) : $industriais->the_post(); ?>
 
-											<li>
-												<div class="collapsible-header"><i class="fas fa-chevron-down fa-2x"></i><?php the_title(); ?></div>
-												<div class="collapsible-body">
-													<span>
-														<p class="mt0"><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-														<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar <i class="fas fa-arrow-right"></i></a>
-													</span>
+											<details>
+												<summary>
+													<?php the_title(); ?>
+												</summary>
+												<div>
+													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
+													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
 												</div>
-											</li>
+											</details>
 
 										<?php endwhile; }
 										else {
@@ -440,10 +460,9 @@ get_header(); ?>
 										?>
 								</ul>				
 							</div>
-						</li>
+						</details>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 	</div>
