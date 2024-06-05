@@ -5,7 +5,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="blocks-container">
-				<div class="row pb50 pb40m">
+				<div class="alignwide">
 					<div class="col s12 center pt50 pt50m">
 						<h3 class="vermelho-bon-text f30"><?php the_title(); ?></h3>
 					</div>
