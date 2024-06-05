@@ -108,7 +108,7 @@
     letter-spacing: -0.1rem !important;
 }
 
-.page-wrapper :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, span, .eyebrow, .content-in-columns h3) {
+.page-wrapper :is(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, ul, li, span, .eyebrow, .content-in-columns h3) {
     font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -122,19 +122,29 @@
     -webkit-transform: translate3d(0,0,0);
 }
 
+.default-template {
+    margin: var(--block-margin) var(--page-padding);
+}
+
 /* Temporary styles for lists */
-ul:is(.collapsible) {
+ul.collapsible {
     list-style: none;
     padding: 0;
+    border-top: 0.01rem solid #ddd;
+    border-right: 0.01rem solid #ddd;
+    border-left: 0.01rem solid #ddd;
+    margin-bottom: -0.01rem;
 }
 
-ul:is(.collapsible) li {
-    margin: 3rem 0;
-    padding-top: 2rem;
-    border-top: 0.1rem solid;
+ul.collapsible details {
+    line-height: 1.5;
 }
 
-ul:is(.collapsible) li :is(.collapsible-header) {
-    font: var(--font-headline-6);
-    color: var(--color-red);
+ul.collapsible details[open] div {
+    padding: calc(var(--row-gap) / 2);
+    border-top: 0.01rem solid #ddd;
+}
+
+ul.collapsible details summary {
+    padding: calc(var(--row-gap) / 2);
 }
