@@ -8,6 +8,7 @@
     margin: 0rem auto;
     display: grid;
     padding: 0 var(--page-padding);
+    row-gap: var(--row-gap);
 }
 
 .animated-counter-realfix h2 {
@@ -104,6 +105,7 @@
     background-color: var(--color-darkest-grey);
     border-radius: var(--element-border-radius);
     text-align: left;
+    min-height: 100%;
 } 
 
 .animated-counter-realfix-items h4 {
@@ -131,12 +133,17 @@
 }
 
 .animated-counter-realfix-content-image {
-    padding: var(--column-gap);
+    margin-top: auto;
+}
+
+.animated-counter-realfix-content-image img {
+    border-radius: var(--element-border-radius);
 }
 
 @media (min-width: 992px) {
     .animated-counter-realfix-wrapper {
         grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--column-gap);
     }
 
     .animated-counter-realfix.alignfull {
