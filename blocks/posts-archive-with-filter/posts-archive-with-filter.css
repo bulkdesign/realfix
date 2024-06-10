@@ -1,3 +1,5 @@
 body .page-wrapper main .posts-archive-with-filter {
     margin-top: calc( var(--block-margin) / 2 );
+    margin-left: var(--page-padding);
+    margin-right: var(--page-padding);
 }
