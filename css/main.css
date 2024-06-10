@@ -122,6 +122,10 @@
     -webkit-transform: translate3d(0,0,0);
 }
 
+:is(.single) .blocks-container {
+    margin: 0 var(--page-padding);
+}
+
 .default-template {
     margin: var(--block-margin) var(--page-padding);
 }
