@@ -122,6 +122,10 @@
     -webkit-transform: translate3d(0,0,0);
 }
 
+.blocks-container > p {
+    text-align: justify;
+}
+
 :is(.single) .blocks-container {
     margin: 0 var(--page-padding);
 }
@@ -140,13 +144,17 @@ ul.collapsible {
     margin-bottom: -0.01rem;
 }
 
+.alignwide .accordion-item:is(:last-child) ul.collapsible {
+    border-bottom: 0.01rem solid #ddd;
+}
+
 ul.collapsible details {
     line-height: 1.5;
 }
 
 ul.collapsible details[open] div {
     padding: calc(var(--row-gap) / 2);
-    border-top: 0.01rem solid #ddd;
+    border-bottom: 0.01rem solid #ddd;
 }
 
 ul.collapsible details summary {
