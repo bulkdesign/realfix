@@ -1,4 +1,5 @@
 .footer-two {
+    font: var(--font-body-small);
     background: var(--color-dark-grey);
     padding: var(--block-margin) var(--page-padding);
 }
@@ -69,7 +70,7 @@
 @media (min-width: 768px) {
     .footer-two .footer-two-main {
         max-width: var(--wide-width);
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr)) 20rem 15rem;
     }
 
     .footer-two .footer-two-copyright {
