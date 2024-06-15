@@ -33,361 +33,58 @@ get_header(); ?>
 
 		<div class="blocks-container">
 			<div class="alignwide">
+				<?php 
+				$categories = array(
+					'acabamentos-madeira' => 'Acabamentos',
+					'fillers-madeira' => 'Fillers',
+					'impermeabilizantes-madeira' => 'Impermeabilizantes',
+					'massas-madeira' => 'Massas',
+					'primers-madeira' => 'Primers',
+					'seladores-madeira' => 'Seladores',
+					'tingidores-madeira' => 'Tingidores',
+					'vernizes-madeira' => 'Vernizes'
+				);
 
-				<!-- Acabamentos -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Acabamentos
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'acabamentos-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
+				function render_category($term, $title) {
+					$query_args = array(
+						'post_type' => 'tintas_madeira',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'categorias_madeira',
+								'field'    => 'slug',
+								'terms'    => $term,
+							),
+						), 
+						'posts_per_page' => -1, 
+						'post_status' => 'publish', 
+						'order' => 'asc'
+					);
+					$query = new WP_Query($query_args);
+					if ($query->have_posts()) {
+						echo '<div class="col s12 m10 push-m1"><ul class="collapsible mg0">';
+						echo '<details><summary>' . $title . '</summary><div><ul class="collapsible">';
+						while ($query->have_posts()) {
+							$query->the_post();
+							echo '<details><summary>' . get_the_title() . '</summary><div><a target="_blank" href="' . get_field('arquivo') . '" title="' . get_the_title() . '">Clique aqui para acessar</a></div></details>';
+						}
+						echo '</ul></div></details>';
+						echo '</ul></div>';
+					} else {
+						echo '<div class="col s12 m10 push-m1"><ul class="collapsible mg0">';
+						echo '<details><summary>' . $title . '</summary><div><p>Não há conteúdos.</p></div></details>';
+						echo '</ul></div>';
+					}
+					wp_reset_query();
+				}
 
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Fillers -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Fillers
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'fillers-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Impermeabilizantes -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Impermeabilizantes
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'impermeabilizantes-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Massas -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Massas
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'massas-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Primers -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Primers
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'primers-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Seladores -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Seladores
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'seladores-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Tingidores -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Tingidores
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'tingidores-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-
-				<!-- Vernizes -->
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
-						<details>
-							<summary>
-								Vernizes
-							</summary>
-							<div>
-								<ul class="collapsible">
-									<!-- Loop categorias -->
-									<?php $madeira = array('post_type' => 'tintas_madeira',
-										'tax_query' => array(
-											array(
-												'taxonomy' => 'categorias_madeira',
-												'field'    => 'slug',
-												'terms'    => 'vernizes-madeira',
-											),
-										), 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
-									$madeira = new WP_Query( $madeira );
-									if ( $madeira->have_posts() ) {
-										while ( $madeira->have_posts() ) : $madeira->the_post(); ?>
-
-											<details>
-												<summary>
-													<?php the_title(); ?>
-												</summary>
-												<div>
-													<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-													<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
-												</div>
-											</details>
-
-										<?php endwhile; }
-										else {
-											echo "Não há conteúdos.";
-										}
-										wp_reset_query();
-										?>
-								</ul>				
-							</div>
-						</details>
-					</ul>
-				</div>
-				
+				foreach ($categories as $slug => $title) {
+					render_category($slug, $title);
+				}
+				?>
 			</div>
 		</div>
+
+
 	</div>
 
 <?php get_footer(); ?>

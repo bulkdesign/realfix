@@ -33,8 +33,8 @@ get_header(); ?>
 
 		<div class="blocks-container">
 			<div class="alignwide">
-				<div class="col s12 m10 push-m1">	
-					<ul class="collapsible mg0">
+				<div class="accordion-item">	
+					<ul class="collapsible">
 
 						<?php $especialidades = array('post_type' => 'especialidades', 'posts_per_page' => -1, 'post_status' => 'publish', 'order' => 'asc');
 						$especialidades = new WP_Query( $especialidades );
@@ -46,8 +46,7 @@ get_header(); ?>
 										<?php the_title(); ?>
 									</summary>
 									<div>
-										<p><strong>Descrição:</strong> <?php the_field('descricao'); ?></p>
-										<a target="_blank" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">Clique aqui para acessar</a>
+										<a target="_blank" href="<?php the_field('boletim_tecnico'); ?>">Clique aqui para acessar</a>
 									</div>
 								</details>
 
