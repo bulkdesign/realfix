@@ -3,3 +3,11 @@ body .page-wrapper main .posts-archive-with-filter {
     margin-left: var(--page-padding);
     margin-right: var(--page-padding);
 }
+
+.posts-archive-with-filter .post-loop-image {
+    display: none;
+}
+
+.posts-archive-with-filter-content-grid h3 {
+    height: auto;
+}
